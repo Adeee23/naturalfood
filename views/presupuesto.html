@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NATURALFOOD</title>
+    <link rel="stylesheet" href="/CSS/style.css"> <!--Enlace a estilo de la web-->
+    <link rel="icon" href="../assets/favicon.png"> <!--Enlace a icono de la web-->
+  </head>
+  <body>
+    <header>
+      <h1>NATURALFOOD</h1>
+       <!--Menú de la web y enlaces-->
+      <nav>
+        <ul class="menu">
+          <li><a href="../index.html">Inicio</a></li> 
+          <li><a href="../views/galería.html">Galería</a></li>
+          <li><a href="presupuesto.html" class="active">Presupuesto</a></li>
+          <li><a href="../views/contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+        <!--Enlaces a imágenes del menú-->
+      <div id="logos-principal">
+        <div class="logos">
+          <img src="../assets/vino.png" alt="" class="logo">
+          <img src="../assets/burguer.png" alt="" class="logo">
+          <img src="../assets/pasta.png" alt="" class="logo">
+          <img src="../assets/taza.png" alt="" class="logo">
+          <img src="../assets/pastel.png" alt="" class="logo">
+        </div>
+      </div>
+    </header>
+    <main>
+      <!--SECCIÓN DE FORMULARIO DE PRESUPUESTO-->
+      <section class="presupuesto">
+        <h2>Solicitud de presupuesto</h2>
+        <!--CAMPO DE ENTRADA PARA EL NOMBRE-->
+        <form novalidate id="presupuestoForm" onsubmit="validarFormulario(event)">
+          <fieldset>
+            <legend>Datos:</legend>
+          <label for="nombre"> *Nombre</label>
+          <input name="nombre" type="text" id="nombre" placeholder="Escribe aquí tu nombre">
+          <div class="errors">
+            <span id="errorNombre"></span>
+          </div>
+          <!--CAMPO DE ENTRADA PARA LOS APELLIDOS-->
+          <label for="apellidos"> *Apellidos</label>
+          <input name="apellidos" type="text" id="apellidos" placeholder="Escribe aquí tus apellidos">
+          <div class="errors">
+            <span id="errorApellidos"></span>
+          </div>
+          <!--CAMPO DE ENTRADA PARA EL TELÉFONO-->
+          <label for="telefono"> *Teléfono</label>
+          <input name="telefono" type="tel" id="telefono" placeholder="Escribe aquí tu teléfono">
+          <div class="errors">
+            <span id="errorTelefono"></span>
+          </div>
+          <!--CAMPO DE ENTRADA PARA EL EMAIL-->
+          <label for="email"> *Email</label>
+          <input name="email" type="email" id="email" placeholder="Escribe aquí tu email">
+          <div class="errors">
+            <span id="errorEmail"></span>
+          </div>
+          <!--ÁREA DE TEXTO PARA SOLICITAR MÁS INFORMACIÓN-->
+          <textarea
+            name="textarea"
+            rows="10"
+            cols="50"
+            placeholder="Solicite más información"
+          ></textarea>
+        </fieldset>
+       
+        <!--CAMPO PARA MOSTRAR PRODUCTO-->
+
+        <fieldset>
+          <legend>Presupuesto</legend>
+        <label for="producto">Elige un producto:</label>
+        <select id="producto" name="producto">
+          <option value="producto1">Producto 1 - 10€</option>
+          <option value="producto2">Producto 2 - 15€</option>
+          <option value="producto3">Producto 3 - 20€</option>
+        </select>
+
+        <!--CAMPO PARA MOSTRAR PLAZO-->
+        
+        <label for="plazo">Plazo en días</label>
+        <input type="number" id="plazo" name="plazo" min="1" max="30" value="10"> 
+        <label for="plazo">Plazo en meses</label>
+        <input type="number" id="plazos" name="plazo" min="1" max="12" value="6"> 
+        <p>20% de descuento en un plazo inferior a 15 días.</p>
+        <p>15% de descuento en un plazo entre 15 y 30 días.</p> 
+        <p>10% de descuento en un plazo superior a 30 días.</p>
+  
+        </fieldset>
+        <!--CAMPO PARA OPCIONES EXTRA-->
+        
+        <fieldset>
+          <legend>Elige tus extras</legend>
+          <input type="checkbox" id="extra1" name="extras" value="5">
+          <label for="extra1">Envío rápido - 6€</label><br>
+
+          <input type="checkbox" id="extra2" name="extras" value="10">
+          <label for="extra2">Garantía extendida - 10€</label><br>
+
+          <input type="checkbox" id="extra3" name="extras" value="8">
+          <label for="extra3">Envoltorio de regalo - 5€</label><br>
+      </fieldset>
+
+        <!--PRESUPUESTO FINAL-->
+        <fieldset>
+          <legend>Presupuesto final</legend>
+          <div class="presupuesto-final">
+        <p>Presupuesto final: <span id="presupuestoFinal">0€</span></p>
+      </div>
+          <!--ACEPTACIÓN DE LA POLÍTICA DE PRIVACIDAD-->
+          <div class="privacidad">
+            <input name="privacidad" id="privacidad" type="checkbox">
+            <label for="privacidad">Política de privacidad</label>
+          </div>
+          <p><small>Los datos indicados con * serán obligatorios</small></p>
+          <div class="errors">
+            <span id="error"></span>
+          </div>
+      </fieldset>
+      <div id="button-f">
+      <button type="reset">Reset</button>
+      <button type="submit">Enviar</button>
+    </div>
+     </form>
+    </section>
+    </main>
+    <footer>
+      <div class="container">
+        <div class="copyright">
+          <p>&copy; NATURALFOOD!2024</p>
+        </div>
+        <!--ENLACES A REDES SOCIALES-->
+        <div class="social-media">
+          <a href="https://www.instagram.com/" target="_blank">
+            <img
+              src="../assets/instagram.svg"
+              width="40"
+              height="40"
+              alt="instagram"
+          ></a>
+          <a
+            href="https://www.facebook.com/login/?locale=es_ES"
+            target="_blank"
+          >
+            <img
+              src="../assets/facebook.svg"
+              width="40"
+              height="40"
+              alt="facebook"
+          ></a>
+          <a href="https://twitter.com/i/flow/login" target="_blank">
+            <img
+              src="../assets/twitter.svg"
+              width="40"
+              height="40"
+              alt="twitter"
+          ></a>
+        </div>
+        <!--AVISO LEGAL-->
+        <div class="aviso-legal">
+          <p><strong> Aviso Legal </strong></p>
+          <p>
+            En cumplimiento con el deber de información recogido en el artículo
+            10 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de
+            la Información y del Comercio Electrónico, se informa a los usuarios
+            del presente sitio web que la titularidad es de la web NATURALFOOD!
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!--Enlace a javaScript-->
+    <script src="../JS/validacion.js"></script>
+  </body>
+</html>

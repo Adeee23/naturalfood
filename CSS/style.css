@@ -1,0 +1,312 @@
+:root {
+    /* Variables para colores y bordes */
+    --main-c: #97CAB3;
+    --border-r: .2rem;
+}
+
+* {
+    /* Aplicando box-sizing y estilos por defecto a todos los elementos */
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    /* Estilo de fondo y fuente para el cuerpo del documento */
+    background-color: #63A989;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    /* Estilos para la cabecera, con fondo, color y alineación de texto */
+    background-color: #63A989;
+    color: #0B5734;
+    padding: 20px;
+    text-align: center;
+}
+
+header h2 {
+    /* Espaciado para el título en la cabecera */
+    padding: 10px 0;
+}
+
+nav a {
+    /* Estilos para los enlaces de navegación */
+    color: black;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+nav a.active {
+    /* Estilos para el enlace activo en la navegación */
+    color: wheat;
+    font-weight: bold;
+}
+
+.menu {
+    /* Estilos para el menú: fondo, posición fija y diseño en línea */
+    background-color: #63A989;
+    display: inline-flex;
+    padding: 6px;
+    font-size: 1.5rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 50px;
+}
+
+.logos {
+    /* Contenedor para los logos, alineados al centro y con espaciado */
+    background-color: #63A989;
+    margin: 10px 0;
+    display: flex;
+    height: 125px;
+    justify-content: center;
+}
+
+.wrap-cta {
+    /* Contenedor para CTA (call to action), centrado horizontalmente */
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.wrap-cta a:hover {
+    /* Cambio de color al pasar el ratón sobre el CTA */
+    color: wheat;
+}
+
+.cta-a {
+    /* Estilos específicos para el botón CTA */
+    color: #0B5734;
+    font-weight: bold;
+    font-size: 1.2rem;
+    background-color: var(--main-c);
+    padding: .5rem 1rem;
+    border-radius: var(--border-r);
+}
+
+header a:hover {
+    /* Cambio de color al pasar el ratón sobre los enlaces en el header */
+    color: wheat;
+}
+
+section {
+    /* Espaciado para las secciones de contenido */
+    padding: 20px;
+    margin: 20px 0;
+}
+
+footer {
+    /* Estilos básicos para el pie de página */
+    color: black;
+    text-align: center;
+}
+
+.footer-container {
+    /* Contenedor para el pie de página */
+    padding: 5px 10px;
+}
+
+.aviso-legal {
+    /* Estilo para el texto legal en el pie de página */
+    color: black;
+}
+
+.social-media img {
+    /* Estilos para las imágenes de redes sociales */
+    max-width: 45px;
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    display: inline-block;
+}
+
+#about, #services, #news, #contact {
+    /* Estilos compartidos para las secciones "about", "services", "news" y "contact" */
+    color: black;
+    background-color: #97CAB3;
+    text-align: center;
+}
+
+#about h2, #services h2, #news h2, #contact h2 {
+    /* Estilos para los títulos en estas secciones */
+    color: #0B5734;
+    font-size: 28px;
+    text-align: left;
+    padding-left: 0%;
+    margin: 25px;
+}
+
+/* Estilos para la sección de presupuesto */
+.presupuesto {
+    background-color: #97CAB3;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 50px;
+}
+  
+.presupuesto p {
+    /* Estilo para los párrafos dentro del presupuesto */
+    font-size: 20px;
+    color: #0B5734;
+    font-weight: bold;
+}
+
+.presupuesto form {
+    /* Estilo para el formulario dentro del presupuesto */
+    display: flex;
+    flex-direction: column;
+    border: 1px solid;
+    padding: 5px;
+}
+
+fieldset {
+    /* Estilos para los fieldset dentro del formulario */
+    margin-bottom: 20px;
+    border: 1px solid #0B5734;
+    padding: 15px;
+    margin: 15px;
+}
+
+label {
+    /* Estilos para las etiquetas de los formularios */
+    display: inline-flex;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+legend {
+    /* Estilo para los títulos de fieldset (legend) */
+    font-weight: bold;
+    padding: 0 10px;
+    text-align: center;
+}
+
+.presupuesto-final p {
+    /* Estilos para el mensaje final del presupuesto */
+    background-color: #63A989;
+    text-align: center;
+    color: wheat;
+    font-size: 35px;
+}
+
+button {
+    /* Estilos para los botones */
+    cursor: pointer;
+    height: 35px;
+    font-size: 20px;
+    color: wheat;
+    background-color: #63A989;
+}
+
+.ruta button {
+    /* Botones en la clase "ruta" centrados automáticamente */
+    display: -webkit-box;
+    margin: auto;
+}
+
+#button-f { 
+    /* Estilos para el contenedor de botones */
+    margin: 10px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+select {
+    /* Estilos para los campos de formulario */
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 20px;
+    color: #0B5734;
+    background-color: rgb(180, 211, 195);
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+textarea {
+    /* Estilos para los campos de texto (textarea) */
+    margin: 15px 0;
+    display: flex;
+    width: 98%;
+    height: 85px;
+    color: #0B5734;
+    background-color: rgb(180, 211, 195);
+}
+
+.galeria {
+    /* Diseño de cuadrícula para la galería */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 30px;
+    padding: 50px;
+}
+
+.galeria img {
+    /* Ajustar las imágenes al 100% del contenedor */
+    width: 100%;
+}
+
+.contacto {
+    /* Flexbox para centrar contenido de contacto */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+}
+  
+.contacto img {
+    /* Ajustar imágenes de contacto a una proporción 2:1 */
+    width: 100%;
+    aspect-ratio: 2/1;
+}
+
+.contacto h2 {
+    /* Estilo para los títulos de la sección de contacto */
+    color: #0B5734;
+}
+
+.informacion {
+    /* Estilos para la sección de información */
+    margin: 30px;
+    height: 100px;
+    width: 95%;
+    display: flex;
+    background-color: #97CAB3;
+    color: #0B5734;
+}
+
+.informacion p {
+    /* Espaciado dentro de los párrafos en la sección de información */
+    margin: 40px;
+}
+
+#mapa {
+    /* Dimensiones para el mapa */
+    height: 400px;
+    width: 600px;
+}
+
+small {
+    /* Estilo para el texto pequeño */
+    font-size: 25px;
+    color: black;
+}
+
+.errors {
+    /* Estilo para los mensajes de error */
+    color: #aa180e;
+    font-size: 20px;
+}
+
+.leaflet-control-container {
+    /* Ocultar el contenedor de controles de Leaflet */
+    display: none;
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NATURALFOOD</title>
+  <link rel="stylesheet" href="/CSS/style.css"> <!--Enlace a estilo de la web-->
+  <link rel="icon" href="../assets/favicon.png"> <!--Enlace a icono de la web-->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" 
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""> <!--Enlace a leaflet (herramienta externa)-->
+</head>
+
+<body>
+  <!--Header Section-->
+  <header>
+    <h1>NATURALFOOD</h1>
+     <!--Menú de la web y enlaces-->
+    <nav>
+      <ul class="menu">
+        <li><a href="/index.html">Inicio</a></li>
+        <li><a href="/views/galería.html">Galería</a></li>
+        <li><a href="/views/presupuesto.html">Presupuesto</a></li>
+        <li><a href="/views/contacto.html" class="active">Contacto</a></li>
+      </ul>
+    </nav>
+    <!--Enlaces a imágenes del menú-->
+    <div id="logos-principal">
+      <div class="logos">
+        <img src="../assets/vino.png" alt="" class="logo">
+        <img src="../assets/burguer.png" alt="" class="logo">
+        <img src="../assets/pasta.png" alt="" class="logo">
+        <img src="../assets/taza.png" alt="" class="logo">
+        <img src="../assets/pastel.png" alt="" class="logo">
+      </div>
+    </div>
+  </header>
+  <main>
+    <!--INFORMACIÓN DE CONTACTO DE LA EMPRESA-->
+    <div class="informacion">
+      <p><strong>Nombre de la Empresa:
+          <br>
+        </strong> NATURALFOOD!</p>
+      <p><strong>CIF/NIF:
+          <br>
+        </strong> B12345678</p>
+      <p><strong>Domicilio Social:
+          <br>
+        </strong> Cueva de la bruja,
+        Madrid, España</p>
+      <p><strong>Correo Electrónico:
+          <br>
+        </strong> naturalfood@gmail.com</p>
+      <p><strong>Teléfono de Contacto:
+          <br>
+        </strong> 900 673 456</p>
+    </div>
+    <!--SECCIÓN DE CONTACTO-->
+    <div class="contacto">
+      <!--MAPA-->
+      <h2>¿DÓNDE ESTAMOS?</h2>
+      <div id="mapa">
+      </div>
+      <!--UBICACIÓN CLIENTE-->
+      <div class="ruta">
+        <label for="direccionCliente">Introduce tu ubicación:</label>
+        <input type="text" id="direccionCliente" placeholder="Ej: Madrid, España">
+        <button onclick="calcularRuta()">Calcular Ruta</button>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="container">
+      <div class="copyright">
+        <p>&copy; NATURALFOOD!2024</p>
+      </div>
+      <!--ENLACES A REDES SOCIALES-->
+      <div class="social-media">
+        <a href="https://www.instagram.com/" target="_blank">
+          <img src="../assets/instagram.svg" width="40" height="40" alt="instagram"></a>
+        <a href="https://www.facebook.com/login/?locale=es_ES" target="_blank">
+          <img src="../assets/facebook.svg" width="40" height="40" alt="facebook"></a>
+        <a href="https://twitter.com/i/flow/login" target="_blank">
+          <img src="../assets/twitter.svg" width="40" height="40" alt="twitter"></a>
+      </div>
+      <!--AVISO LEGAL-->
+      <div class="aviso-legal">
+        <p><strong> Aviso Legal </strong></p>
+        <p>
+          En cumplimiento con el deber de información recogido en el artículo
+          10 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de
+          la Información y del Comercio Electrónico, se informa a los usuarios
+          del presente sitio web que la titularidad es de la web NATURALFOOD!
+        </p>
+      </div>
+    </div>
+  </footer>
+  <!--Enlace a leaflet (herramienta externa)-->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+ <!--Enlace a javaScript-->
+  <script src="../JS/mapa.js"></script>
+</body>
+
+</html>
